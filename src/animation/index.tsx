@@ -1,4 +1,5 @@
 import gsap from "gsap";
+import { MouseEvent } from "react";
 
 // Declare a general timeline to use in all the animation functions.
 
@@ -55,7 +56,7 @@ export const preLoaderAnim = () => {
       duration: 1.5,
       height: "0vh",
       ease: "Power3.easeOut",
-      onComplete: mobileLanding(),
+      onComplete: mobileLanding,
     },
       "-=2"
     )
@@ -78,13 +79,13 @@ export const preLoaderAnim = () => {
         amount: 0.5,
       },
       ease: "expo.easeOut",
-      onComplete: animateMainShape(),
+      onComplete: animateMainShape,
     })
     .from(".main-circle", {
       duration: 1,
       opacity: 0,
       ease: "power3.easeInOut",
-      onComplete: animateShapes(),
+      onComplete: animateShapes,
     })
   .from(".shapes .shape", {
     duration: 1,
@@ -189,7 +190,7 @@ export const closeMenu = () => {
 };
 
 // recurrent animations
-export const fadeUp = (el, delay = 0) => {
+export const fadeUp = (el: string |HTMLElement, delay = 0) => {
   tl.from(el, {
     y: 150,
     duration: 1,
@@ -274,15 +275,15 @@ const animateMainShape = () => {
     });
 };
 
-export const boxHover = (e) => {
+export const boxHover = (e: MouseEvent<HTMLElement>) => {
   const tl = gsap.timeline();
   window.innerWidth >= 986 &&
     tl
-      .to(e.target.querySelector(".link"), {
+      .to(e.currentTarget.querySelector(".link"), {
         duration: 0,
         opacity: 1,
       })
-      .from(e.target.querySelectorAll(".box-anim"), {
+      .from(e.currentTarget.querySelectorAll(".box-anim"), {
         duration: 0.3,
         opacity: 0,
         y: 30,
@@ -291,15 +292,15 @@ export const boxHover = (e) => {
       });
 };
 
-export const boxExit = (e) => {
+export const boxExit = (e: MouseEvent<HTMLElement>) => {
   window.innerWidth >= 986 &&
-    gsap.to(e.target.querySelector(".link"), {
+    gsap.to(e.currentTarget.querySelector(".link"), {
       duration: 0,
       opacity: 0,
     });
 };
 
-export const fadeIn = (el) => {
+export const fadeIn = (el: HTMLElement) => {
   gsap.to(el, {
     duration: 2,
     opacity: 1,
@@ -308,7 +309,7 @@ export const fadeIn = (el) => {
   });
 };
 
-export const fadeOut = (el) => {
+export const fadeOut = (el: HTMLElement) => {
   gsap.to(el, {
     duration: 1,
     opacity: 0,
