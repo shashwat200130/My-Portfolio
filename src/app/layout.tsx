@@ -6,8 +6,6 @@ import PreLoader from "@/components/PreLoader";
 import Footer from "@/components/Footer";
 import { PrismicPreview } from "@prismicio/next";
 import { createClient, repositoryName } from "@/prismicio";
-import { title } from "process";
-import clsx from "clsx";
 
 const geistSans = urbanist({
   src: "./fonts/GeistVF.woff",

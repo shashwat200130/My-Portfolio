@@ -3,8 +3,7 @@
 import { ImageField } from "@prismicio/client"
 import { PrismicNextImage } from "@prismicio/next";
 import clsx from "clsx";
-import { gsap } from "gsap";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 
 
 
@@ -16,16 +15,6 @@ type AvatarProps = {
 
 export default function Avatar({ image, className }: AvatarProps) {
     const component = useRef(null);
-
-   useEffect(()=>{
-    let ctx = gsap.context(()=>{
-        gsap.fromTo(
-            ".avatar",
-            {opacity: 0, scale: 1.4},
-            { scale:1, opacity: 1, duration: 1.3, ease: "power3.inOut"}
-        );
-    });
-   });
     
 
     return (
