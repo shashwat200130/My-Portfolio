@@ -34,38 +34,6 @@
           "placeholder": ""
         }
       },
-      "code_title": {
-        "type": "Text",
-        "config": {
-          "label": "Code Title",
-          "placeholder": ""
-        }
-      },
-      "code_link": {
-        "type": "Link",
-        "config": {
-          "label": "Code Link",
-          "placeholder": "",
-          "allowTargetBlank": false,
-          "select": null
-        }
-      },
-      "video_title": {
-        "type": "Text",
-        "config": {
-          "label": "Video Title",
-          "placeholder": ""
-        }
-      },
-      "video_link": {
-        "type": "Link",
-        "config": {
-          "label": "Video Link",
-          "placeholder": "",
-          "allowTargetBlank": false,
-          "select": null
-        }
-      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",

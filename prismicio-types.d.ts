@@ -268,50 +268,6 @@ interface ProjectDocumentData {
   date: prismic.DateField;
 
   /**
-   * Code Title field in *Project*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: project.code_title
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  code_title: prismic.KeyTextField;
-
-  /**
-   * Code Link field in *Project*
-   *
-   * - **Field Type**: Link
-   * - **Placeholder**: *None*
-   * - **API ID Path**: project.code_link
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-   */
-  code_link: prismic.LinkField;
-
-  /**
-   * Video Title field in *Project*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: project.video_title
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  video_title: prismic.KeyTextField;
-
-  /**
-   * Video Link field in *Project*
-   *
-   * - **Field Type**: Link
-   * - **Placeholder**: *None*
-   * - **API ID Path**: project.video_link
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-   */
-  video_link: prismic.LinkField;
-
-  /**
    * Slice Zone field in *Project*
    *
    * - **Field Type**: Slice Zone
