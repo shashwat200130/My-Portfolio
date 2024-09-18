@@ -15,7 +15,7 @@ const PreLoader = () => {
         <div className="texts-container">
             <span>Code,</span>
             <span>Create,</span>
-            <span>Smile</span>
+            <span>Build</span>
         </div>
     </div>
   )
